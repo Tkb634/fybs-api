@@ -1,9 +1,9 @@
 <?php
 // Database connection settings
-$host = "localhost";
-$user = "root";          // Default XAMPP username
-$password = "";          // Default XAMPP password (empty)
-$database = "fybs_app";  // Your database name
+$host = "sql103.infinityfree.com";
+$user = "if0_41617889";          // Default XAMPP username
+$password = "T1n0t3nda123";          // Default XAMPP password (empty)
+$database = "if0_41617889_fybs_app";  // Your database name
 
 // Create MySQL connection
 $conn = mysqli_connect($host, $user, $password, $database);
