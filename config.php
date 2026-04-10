@@ -1,15 +1,13 @@
 <?php
-// Database connection settings
-$host = "localhost";
-$user = "root";          // Default XAMPP username
-$password = "";          // Default XAMPP password (empty)
-$database = "fybs_app";  // Your database name
+// Get credentials from environment variables (set on Render)
+$host = getenv('DB_HOST') ?: 'localhost';
+$user = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: '';
+$database = getenv('DB_NAME') ?: 'fybs_app';
 
-// Create MySQL connection
 $conn = mysqli_connect($host, $user, $password, $database);
 
-// Check if connection failed
 if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
+    die(json_encode(["status" => "error", "message" => "Database connection failed"]));
 }
 ?>
