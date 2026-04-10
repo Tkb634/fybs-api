@@ -1,0 +1,205 @@
+/* General app background */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Card spacing and soft shadow */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Button style override */
+.btn-primary {
+    background-color: #1e40af;
+    border: none;
+}
+/* Bottom navigation spacing fix */
+body {
+    padding-bottom: 60px; /* prevents content being hidden */
+}
+
+/* Active link look */
+.navbar a {
+    font-weight: 500;
+    color: #1e40af;
+}
+/* Custom styles for FYBS PWA */
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #3b82f6;
+}
+
+/* Card hover effects */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 16px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+.navbar-fixed-bottom {
+    padding: 10px 0;
+    background: white !important;
+}
+
+.navbar-fixed-bottom a {
+    color: #666;
+    font-size: 14px;
+}
+
+.navbar-fixed-bottom a:hover {
+    color: var(--primary-color);
+}
+
+/* Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* PWA specific */
+@media (display-mode: standalone) {
+    body {
+        padding-bottom: 60px; /* Space for bottom nav */
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .navbar-fixed-bottom {
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Button improvements */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    padding: 12px 24px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+/* Quick action cards */
+.card[href] {
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.card[href]:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+/* FYBS Specific Styles */
+.category-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    color: inherit;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #1e40af;
+    text-decoration: none;
+}
+
+.active-category {
+    border-color: #1e40af !important;
+    background-color: rgba(30, 64, 175, 0.05);
+}
+
+.class-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.class-card:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/* Bottom navigation icons */
+.navbar-fixed-bottom i {
+    transition: all 0.3s ease;
+}
+
+.navbar-fixed-bottom a:hover i {
+    transform: scale(1.1);
+}
+
+/* Video container */
+.ratio-16x9 {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Notification */
+.notification {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+
+    .card {
+        margin-bottom: 12px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+}

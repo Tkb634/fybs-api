@@ -1,0 +1,120 @@
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  button, 
+  .btn, 
+  .nav-item,
+  .option,
+  .quiz-card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Improve readability */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Bottom sheet for modals */
+  .modal-bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pull to refresh indicator */
+  .pull-to-refresh {
+    text-align: center;
+    padding: 10px;
+    color: #6b7280;
+    font-size: 12px;
+  }
+  
+  /* Better spacing for mobile */
+  .main-container {
+    padding: 15px 15px 80px;
+  }
+  
+  /* Larger touch targets for forms */
+  input, 
+  select, 
+  textarea {
+    font-size: 16px !important;
+    padding: 12px !important;
+  }
+  
+  /* Prevent zoom on input focus */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    font-size: 16px;
+  }
+}
+
+/* Dark mode improvements */
+@media (prefers-color-scheme: dark) {
+  .modal-bottom-sheet {
+    background: #1f2937;
+    color: #f9fafb;
+  }
+}
+
+/* PWA specific */
+@media (display-mode: standalone) {
+  /* Hide browser UI when in standalone mode */
+  .browser-only {
+    display: none;
+  }
+  
+  /* Add safe area insets for notches */
+  .main-header {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* iOS specific */
+  @supports (padding: max(0px)) {
+    .main-header {
+      padding-top: max(20px, env(safe-area-inset-top));
+    }
+    
+    .bottom-nav {
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

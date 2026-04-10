@@ -1,0 +1,155 @@
+/* LIFE Hacks Specific Styles */
+
+/* Nav Cards */
+.nav-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: white;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    border-color: #10b981;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+    text-decoration: none;
+}
+
+.nav-icon {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-card:hover .nav-icon {
+    transform: scale(1.1);
+}
+
+/* Habit Cards */
+.habit-card {
+    border-left: 4px solid #10b981;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.habit-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.habit-card.completed {
+    border-left-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.habit-card.missed {
+    border-left-color: #ef4444;
+    opacity: 0.7;
+}
+
+/* Streak Badges */
+.streak-badge {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+/* Progress Bars */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* Timer */
+#timerDisplay {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #10b981;
+}
+
+/* Category Colors */
+.category-health { border-color: #10b981; }
+.category-productivity { border-color: #f59e0b; }
+.category-spiritual { border-color: #8b5cf6; }
+.category-business { border-color: #3b82f6; }
+.category-finance { border-color: #6366f1; }
+
+/* Background Colors */
+.bg-light-green {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.bg-light-blue {
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Checkbox styling */
+.habit-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.habit-checkbox.checked {
+    background-color: #10b981;
+    border-color: #10b981;
+    color: white;
+}
+
+/* Grid/List view */
+.grid-view .habit-card {
+    width: 100%;
+}
+
+.list-view .habit-card {
+    display: flex;
+    align-items: center;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .nav-icon {
+        font-size: 1.5rem;
+    }
+    
+    #timerDisplay {
+        font-size: 2rem;
+    }
+    
+    .habit-card {
+        margin-bottom: 10px;
+    }
+}

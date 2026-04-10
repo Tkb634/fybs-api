@@ -1,0 +1,95 @@
+{
+  "name": "FYBS Youth App",
+  "short_name": "FYBS",
+  "description": "Faith-Based Youth Application for Bible Study and Spiritual Growth",
+  "start_url": "/fybs-pwa/index.php",
+  "display": "standalone",
+  "theme_color": "#1d4ed8",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/fybs-pwa/",
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screenshot-home.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Home Screen"
+    }
+  ],
+  "categories": ["education", "lifestyle", "social"],
+  "shortcuts": [
+    {
+      "name": "Bible Quiz",
+      "short_name": "Quiz",
+      "description": "Take a Bible quiz",
+      "url": "/fybs-pwa/bible_quiz.php",
+      "icons": [{ "src": "icons/quiz-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "GYC Chat",
+      "short_name": "Chat",
+      "description": "Join GYC chat room",
+      "url": "/fybs-pwa/gyc.php",
+      "icons": [{ "src": "icons/chat-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Leaderboard",
+      "short_name": "Leaderboard",
+      "description": "View rankings",
+      "url": "/fybs-pwa/leaderboard.php",
+      "icons": [{ "src": "icons/trophy-icon.png", "sizes": "96x96" }]
+    }
+  ],
+  "prefer_related_applications": false
+}
